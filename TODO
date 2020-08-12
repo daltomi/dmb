@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------------
+Tabla de Referencia:
+--------------------------------------------------------------------------------------
+
+[R] "Required" - Todas las ideas urgentes y necesarias para mejorar el programa.
+
+[E] "Expected" - Cualquier idea que agrega algo extra pero que no son esenciales.
+
+[H] "Hope-for" - Todas las ideas difíciles que uno espera poder hacer.
+
+[* R\E\H] Realizado/logrado.
+
+Nota: evitar bromas innecesarias :)
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+
+[E] Permitir abrir un directorio y buscar recursivamente archivos de audio.
+
+[E] Permitir abrir un directorio con evento drag & drop.Nota: la ui no inicia si no se
+    pasan parámetro al programa.
+
+[R] No terminar el programa en caso de fallo al abrir un archivo. En lugar de ello
+    continuar con el siguiente archivo de la playlist y marcar el archivo con problemas
+    como corruto o inválido.
+
+[H] Área de notificación.
+
+[*E] Progress bar. Se necesita mostrar un porcenteje de la reproducción.
+    La idea es utilizar un Fl_Progress pero existe un problema con Fl::check, si se lo
+    llama muy seguido puede darse un segment fault por una cuestion de un thread de xcb.
+    La otra opción es simplemente mostrar un texto en forma de: 14%.
+
+[*R] Permitir repetir la playlist al finalizar.

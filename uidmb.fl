@@ -1,0 +1,71 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0302 
+header_name {.hpp} 
+code_name {.cxx}
+decl {\#include <FL/filename.H>} {
+  comment fl_filename_name public global
+} 
+
+decl {\#include <memory>} {public local
+} 
+
+decl {\#include "Singleton.hpp"} {public local
+} 
+
+widget_class uidmb {
+  label dmb open
+  xywh {520 448 130 50} type Double color 0 selection_color 0
+  code0 {set_override();}
+  class Fl_Double_Window size_range {130 60 130 60} visible
+} {
+  Fl_Button btnPlayPause {
+    label {@||}
+    user_data PLAYPAUSE user_data_type long
+    callback onCmdAction
+    xywh {5 31 30 16} box FLAT_BOX color 0 selection_color 4 labelsize 10 labelcolor 93
+    code0 {o->clear_visible_focus();}
+  }
+  Fl_Button btnFoward {
+    label {@>>}
+    user_data FOWARD user_data_type long
+    callback onCmdAction
+    xywh {35 31 30 16} box FLAT_BOX color 0 selection_color 4 labelsize 10 labelcolor 93
+    code0 {o->clear_visible_focus();}
+  }
+  Fl_Button btnBackward {
+    label {@<<}
+    user_data BACKWARD user_data_type long
+    callback onCmdAction
+    xywh {65 31 30 16} box FLAT_BOX color 0 selection_color 4 labelsize 10 labelcolor 93
+    code0 {o->clear_visible_focus();}
+  }
+  Fl_Button btnQuit {
+    label Quit
+    user_data QUIT user_data_type long
+    callback onCmdAction
+    xywh {95 31 30 16} box FLAT_BOX shortcut 0x40071 color 0 selection_color 4 labelfont 1 labelsize 9 labelcolor 93
+    code0 {o->clear_visible_focus();}
+  }
+  Fl_Box lbFiles {
+    label xxxxxxxx
+    xywh {75 11 55 19} box FLAT_BOX color 0 labelfont 1 labelsize 9 labelcolor 49 align 24
+  }
+  Function {handle(int);} {return_type int
+  } {}
+  Fl_Box lbStatus {
+    label {Reading...}
+    xywh {0 11 56 17} box FLAT_BOX color 0 labelsize 9 labelcolor 49 align 20
+  }
+  Fl_Slider progressBar {
+    callback onCmdSlider selected
+    xywh {0 0 130 10} type {Horz Fill} box BORDER_BOX color 0 selection_color 218 when 4
+    code0 {o->minimum(0);}
+    code1 {o->clear_visible_focus();}
+  }
+} 
+
+decl {using uiInst = Singleton<uidmb>;} {public local
+} 
+
+decl {enum { PLAYPAUSE=0, FOWARD, BACKWARD, QUIT};} {public global
+} 

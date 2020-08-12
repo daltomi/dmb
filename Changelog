@@ -1,0 +1,76 @@
+CHANGELOG
+
+1.5.2
+	* Playlist
+	- Recuerda el último estado de backward/foward y continua el item
+	  anterior o posterior según corresponda.
+	- No reproduce archivos no válidos, salta automáticamente a otro item.
+1.5.1
+	* UI
+	- Se muestra la duración total del archivo en forma de tooltip
+	  para progress bar.
+1.5
+	* UI 
+	- Se implementó un slider como control de posición.
+
+1.4.1
+	* UI
+	- Se indica el estado del archivo de audio
+
+1.4
+	* UI
+	- Se elimino el botón repetir.
+	- Se cambio el color de fondo de progress bar.
+	* Playlist
+	- Se repite automáticamente cuando llega al final.
+
+1.3.2
+	* Bugfix 1.3.1
+	- Ver archivo Bugfix
+1.3.1
+	* UI
+	- Se mejoro el aspecto de la ui.
+	- Minor bug fix.
+1.3
+	* UI
+	- Se implemento una barra de progreso.
+1.2
+	* UI.
+	- Si elimino el borde de la ventana.
+	- Se activo el modo modal y override.
+	- Permite mover la ventana con el mouse.
+	* Tooltips
+	- Se aumento el tamaño de la fuente.
+1.1
+	* Foco.
+	- Se quita evento de foco Ctrl + Tab
+	* Tooltips
+	- Se elimino en el tooltip el path absoluto.
+	- Se muestra únicamente el nombre del archivo.  
+1.0
+	* Repetir playlist.
+	- Se agrego un botón a la UI tipo toggle, que permite 
+	  activar/desactivar la repetición.
+	* Aviso de error, parámetros del programa.
+	- Se mejoro un poco el aviso, intentando dar unos ejemplos.
+
+beta 3
+	* Tooltips
+	- Se implemento el manejo de tooltips.
+	- Se muestra los nombre de los archivos en los
+	  botones correspondientes [>] [>>] [<<] [Quit]	
+	- Ver FIXME en Tooltips.hpp#createTooltips().
+	* Refactoring
+	- Se agregaron algunos header files para 
+	  mejor control sobre las funciones.
+	* CMake
+	- Se modifico el archivo CMakeLists.txt agregando
+	  el enlace a -lrt (gracias rbistolfi).
+
+beta 2
+	* Teting
+	- Se pudo abrir con exito utilizando comodin: *.ogg
+	* CSndFile
+	- Ahora muetra un error textual.
+
+
