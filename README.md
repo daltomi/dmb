@@ -1,4 +1,3 @@
-
 ### dmb player - beta
 
 <img src="https://git.disroot.org/daltomi/dmb/raw/branch/master/screenshot.png"/>
@@ -20,23 +19,23 @@
 	del programa, puede ser entre 1 e infinitos(teórico) :)
 	- Nota 1: Los nombres de archivo no pueden tener espacios.
 			Si los tuviera de debe utilizar comillas dobles, ej:
-			dmb "mi archivo de audio.ogg" mi_otro_archivo.ogg
-	- Nota 2: Se puede utilizar comodines, ej:
-		  dmb *.ogg
+			`dmb "mi archivo de audio.ogg" mi_otro_archivo.ogg`
+	- Nota 2: Se puede utilizar comodines, ej: `dmb *.ogg`
 
 
 * ¿Qué funciones tiene?
 
 	Permite lo siguiente:
-	- 1 Pausar el audio.
-	- 2 Saltar al siguiente archivo de reproducción.
-	- 3 Saltar al anterior archivo de reproducción.
+	- Pausar el audio.
+	- Saltar al siguiente archivo de reproducción.
+	- Saltar al anterior archivo de reproducción.
+
 	Tiene un botón para salir o se pude presionar Esc.
 
 
 * ¿Que formatos de archivos soporta?
 
-	Todos aquellos formatos soportados por la librería "sndfile".
+	Todos aquellos formatos soportados por la librería `sndfile`.
 	- Nota 1: sndfile no soporta el formato MPEG Layer 3 (mp3) por
 			problemas con la licencia.
 	- Nota 2: el soporte de algunos formatos dependerán de la librerías
@@ -48,14 +47,5 @@
 	Solamente GNU/Linux... pero también cualquier plataforma que soporte
 	las siguientes librerías debería funcionar:
 	FLTK, portaudio, sndfile, con sus respectivas dependencias.
-
-
-
-
-
-
-
-
-
 
 
