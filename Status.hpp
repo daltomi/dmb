@@ -27,7 +27,7 @@
 enum class ST
 {
     READING=0,
-    PAUSE,      
+    PAUSE,
     PLAYING,
     ENDSONG,    // output_cb() [ paComplete ]
     SEEK_LOCK,
@@ -37,25 +37,26 @@ enum class ST
 };
 
 
+static const char* cStatus[3]= {
+/*READING   */    "Reading..",
+/*PAUSE     */    "Pause...",
+/*PLAYING   */    "Playing..."
+};
+
 class CStatus
 {
     private:
 
         ST status;
 
-        constexpr static const char* cStatus[3]= {
-        /*READING   */    "Reading..",
-        /*PAUSE     */    "Pause...",
-        /*PLAYING   */    "Playing..."
-        };
 
     public:
 
 
         explicit CStatus()
         {  }
-        
-        void set(const ST status) 
+
+        void set(const ST status)
         {
             if ( status != this->status )
             {
