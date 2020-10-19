@@ -1,6 +1,7 @@
 ### dmb player - beta
 
-<img src="https://git.disroot.org/daltomi/dmb/raw/branch/master/screenshot.png"/>
+<img src="https://github.com/daltomi/dmb/raw/master/screenshot.png"/>
+
 
 * ¿Qué es?
 
